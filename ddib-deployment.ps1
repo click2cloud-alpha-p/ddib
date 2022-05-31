@@ -5,7 +5,7 @@ $azure_password = 'Iamc00l@7875'
 $azure_subscriptionID = '797407a8-807d-4152-9a74-9a7d582191e7'
 $resourceGroup = 'new-ddib-rg'
 $rgLocation = 'eastus'
-$powerBIworkspace ='New-Engagement-Accelerators-Manufacturing'
+$powerBIworkspace ='New-Engagement-Accelerators-Manufacturing-1'
 $storageAccountAzure = 'newdreamdemosa'
 $sql_admin_login_password = 'ROOT#123'
 
