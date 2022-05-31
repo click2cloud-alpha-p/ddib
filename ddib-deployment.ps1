@@ -1,8 +1,8 @@
 ########################## Setting Environment variables  #####################################
 
-$azure_username = 'azure.networking@click2cloud.net'
-$azure_password = '$uper!008'
-$azure_subscriptionID = '9e58d72f-351b-4828-a709-7758de05531b'
+$azure_username = 'sanchit.gangulwar@click2cloud.net'
+$azure_password = 'Iamc00l@7875'
+$azure_subscriptionID = '797407a8-807d-4152-9a74-9a7d582191e7'
 $resourceGroup = 'new-ddib-rg'
 $rgLocation = 'eastus'
 $powerBIworkspace ='New-Engagement-Accelerators-Manufacturing'
