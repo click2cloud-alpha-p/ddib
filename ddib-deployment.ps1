@@ -214,9 +214,9 @@ function createPowerBIworkspace() {
 # Create Custom Deployment in Azure
 function createCustomDeployment(){
     # Check custom deployment exists
-    $DEXISTS = az deployment group show --name 'Custom_Deployment' --resource-group $resourceGroup --subscription $azure_subscriptionID 2>&1 >>$null
     $environment_code = Write-Output ( -join ((0x30..0x39) + ( 0x41..0x5A) + ( 0x61..0x7A) | Get-Random -Count 6 | ForEach-Object {[char]$_}) ).ToLower()
-    if ($null -eq $DEXISTS) {
+    az deployment group show --name 'Custom_Deployment' --resource-group $resourceGroup --subscription $azure_subscriptionID
+    if ($LASTEXITCODE -eq 0) {
         Write-Host "Custom Deployment already exists, skip create custom deployment" -ForegroundColor Yellow
     } else {
 	Write-Host "Creating Custom Deployment in resource group $resourceGroup" -ForegroundColor Green
