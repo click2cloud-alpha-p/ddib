@@ -3,7 +3,7 @@
 $azure_username = 'sanchit.gangulwar@click2cloud.net'
 $azure_password = 'Iamc00l@7875'
 $azure_subscriptionID = '797407a8-807d-4152-9a74-9a7d582191e7'
-$resourceGroup = 'new-ddib-rg-1'
+$resourceGroup = 'new-ddib-rg'
 $rgLocation = 'eastus'
 $powerBIworkspace ='New-Engagement-Accelerators-Manufacturing-2'
 $storageAccountAzure = 'newdreamdemosa'
