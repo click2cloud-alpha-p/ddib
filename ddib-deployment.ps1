@@ -215,14 +215,14 @@ function createPowerBIworkspace() {
 function createCustomDeployment(){
     # Check custom deployment exists
     $environment_code = Write-Output ( -join ((0x30..0x39) + ( 0x41..0x5A) + ( 0x61..0x7A) | Get-Random -Count 6 | ForEach-Object {[char]$_}) ).ToLower()
-    az deployment group show --name 'Custom_Deployment' --resource-group $resourceGroup --subscription $azure_subscriptionID
+    az deployment group show --name 'Custom_Deployments' --resource-group $resourceGroup --subscription $azure_subscriptionID
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "Custom Deployment already exists, skip create custom deployment" -ForegroundColor Yellow
+        Write-Host "Custom Deployments already exists, skip create custom deployment" -ForegroundColor Yellow
     } else {
-	Write-Host "Creating Custom Deployment in resource group $resourceGroup" -ForegroundColor Green
+	Write-Host "Creating Custom Deployments in resource group $resourceGroup" -ForegroundColor Green
         # Create a custom deployment
         az deployment group create `
-            --name='Custom_Deployment' `
+            --name='Custom_Deployments' `
             --resource-group=$resourceGroup `
             --subscription=$azure_subscriptionID `
             --template-uri="https://raw.githubusercontent.com/microsoft/Azure-Analytics-and-AI-Engagement/main/Manufacturing/automation/mainTemplate-shell.json" `
